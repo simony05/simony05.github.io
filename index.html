@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Simon Yan Logo</div>
+      <div class="logo">Simon Yan\</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -20,7 +20,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
+      <div class="logo">Simon Yan</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -81,14 +81,11 @@
           <div class="about-details-container">
             <div class="about-containers">
               <div class="details-container">
-                <img
-                  src="./assets/education.png"
-                  alt="Education icon"
-                  class="icon"
-                />
                 <h3>Education</h3>
-                <p>B.S. in Computer Science, 2023 - 2027</p>
-                <p>University of California, Santa Barbara</p>
+                <p>Saratoga High School, 2019 - 2023</p>
+                <br>
+                <p>University of California - Santa Barbara, 2023 - 2027</p>
+                <p>B.S. in Computer Science</p>
               </div>
             </div>
             <div class="text-container">
@@ -198,15 +195,9 @@
                 >
                   Github
                 </button>
-                <button class="btn btn-color-2 project-btn" onclick="openModalVideo('video-demo-1')">Video Demo</button>
+                <button class="btn btn-color-2 project-btn modal-btn" id="video1">Video Demo</button>
               </div>
-              <div class="modal-video-container" id="video-demo-1">
-                <div class="modal-video">
-                  <!-- Video content -->
-                  <iframe src="https://youtu.be/H6BRfTwE9zc" frameborder="0" allowfullscreen></iframe>
-                  <!-- Close button -->
-                  <button class="close-btn">&times;</button>
-                </div>
+              <div class="modal-video-container">
               </div>
             </div>
             <div class="details-container color-container">
@@ -238,22 +229,9 @@
                 >
                   Github
                 </button>
-                <button class="btn btn-color-2 project-btn" onclick="openModalVideo('video-demo-1')">Video Demo</button>
+                <button class="btn btn-color-2 project-btn modal-btn" id="video2">Video Demo</button>
               </div>
-              <div class="modal-video-container" id="video-demo-1">
-                <div class="modal-video">
-                  <!-- Video content -->
-                  <iframe
-                    width="560" 
-                    height="315"
-                    src="https://www.youtube.com/embed/H6BRfTwE9zc?autoplay=1"
-                    frameborder="0"
-                    allowfullscreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  ></iframe>
-                  <!-- Close button -->
-                  <button class="close-btn">&times;</button>
-                </div>
+              <div class="modal-video-container">
               </div>
             </div>
             <div class="details-container color-container">
@@ -286,12 +264,9 @@
                 >
                   Github
                 </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Video Demo
-                </button>
+                <button class="btn btn-color-2 project-btn modal-btn" id="video3">Video Demo</button>
+              </div>
+              <div class="modal-video-container">
               </div>
             </div>
             <div class="details-container color-container">
@@ -323,12 +298,9 @@
                 >
                   Github
                 </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Video Demo
-                </button>
+                <button class="btn btn-color-2 project-btn" id="video4">Video Demo</button>
+              </div>
+              <div class="modal-video-container">
               </div>
             </div>
           </div>
@@ -367,7 +339,6 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>

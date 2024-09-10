@@ -406,44 +406,39 @@ article .icon {
   text-align: center;
 }
 
-/* Style the modal video container */
-.modal-video-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 1000;
-}
-
 .modal-video {
-  position: relative;
-  width: 80%; /* Take up 80% of the screen width */
-  height: 80vh; /* Take up 80% of the screen height */
-  margin: 40px auto;
-  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
   padding: 20px;
+  display: flex;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1001;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style the close button */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+.modal-video iframe {
+  aspect-ratio: 16/9;
+  width: 75%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.modal-container:hover:not(.modal-video) {
   cursor: pointer;
 }
 
 .in-progress {
-  font-size: 0.6em; /* reduced font size */
+  font-size: 0.6em;
   font-weight: normal;
-  color: #666; /* adjust the color to your liking */
-  margin-left: 0.5em; /* add some space between the title and "in progress" */
+  color: #666;
+  margin-left: 0.5em;
 }
 
 /* CONTACT */
