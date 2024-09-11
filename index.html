@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Simon Yan</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Simon Yan\</div>
+      <div class="logo">Simon Yan</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -38,7 +38,7 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Simon Yan</h1>
-        <p class="section__text__p2">Software Developer</p>
+        <p class="section__text__p2">Aspiring Software Developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -49,20 +49,6 @@
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/'"
-          />
         </div>
       </div>
     </section>
@@ -80,7 +66,7 @@
           </div>
           <div class="about-details-container">
             <div class="about-containers">
-              <div class="details-container">
+              <div class="text-container">
                 <h3>Education</h3>
                 <p>Saratoga High School, 2019 - 2023</p>
                 <br>
@@ -90,12 +76,11 @@
             </div>
             <div class="text-container">
               <p>
-                Hello, my name is Simon Yan and I'm a second-year undergraduate
-                studying computer science at UCSB. I'm interested in development
-                of all kinds, from machine learning applications to mobile and
-                web app backend development. Through projects, I like to explore
-                new technologies and programming languages. Check them out
-                below!
+                Hello! I'm Simon Yan, a second-year computer science student at UCSB with 
+                a passion for development across various domains, including machine learning, 
+                mobile apps, and backend web development. I love exploring new technologies 
+                and programming languages through hands-on projects, and you can check out 
+                some of my work below!
               </p>
             </div>
           </div>
@@ -169,16 +154,15 @@
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
+                  src="./assets/worldlybites.png"
+                  alt="Worldly Bites"
                   class="project-img"
                 />
                 <div class="more-info-text">
                   <h3>Worldly Bites Details</h3>
                   <p style="margin-bottom: 20px;">
-                    A mobile application using the power of AI to share the cultures of the world. 
-                    Find new recipes from different regions using the text input or ingredient scanner.
-                    Watch as the app finds recipes based on the inputted ingredients and get cooking!
+                    A mobile app that uses AI to share global cultures by finding recipes from different regions. 
+                    Input text or scan ingredients, and the app suggests recipes for you to try!
                   </p>
                   <p style="margin-bottom: 20px;">
                     <strong>Technologies used:</strong>
@@ -203,16 +187,15 @@
             <div class="details-container color-container">
               <div class="article-container">
                 <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
+                  src="./assets/brainwave.png"
+                  alt="Brainwave"
                   class="project-img"
                 />
                 <div class="more-info-text">
                   <h3>Brainwave Details</h3>
                   <p style="margin-bottom: 20px;">
-                    A social media style platform that connects students looking for study buddies.
-                    Users can make posts and interact with posts through private realtime chats.
-                    Includes user authentication, login/logout, and secure messaging.
+                    A social media platform that connects students seeking study buddies, 
+                    allowing users to post, message in real-time, and securely create accounts.
                   </p>
                   <p style="margin-bottom: 20px;">
                     <strong>Technologies used:</strong>
@@ -225,7 +208,7 @@
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/simony05/worldlybites', '_blank')"
+                  onclick="window.open('https://github.com/simony05/study_group', '_blank')"
                 >
                   Github
                 </button>
@@ -244,9 +227,8 @@
                 <div class="more-info-text">
                   <h3>Red Wine Quality Calculator Details</h3>
                   <p style="margin-bottom: 20px;">
-                    Our application simplifies the challenges faced by amateur winemakers in crafting exceptional red wine from home. 
-                    Because of the taste disparity between low and high-quality wines, we provided a simplified range of features to
-                    allow winemakers to refine the variables to take account of and guide them towards the finest quality wine.
+                    An application that helps amateur winemakers craft exceptional red wine at home by simplifying the 
+                    process and guiding them to refine key variables for producing high-quality wine.
                   </p>
                   <p style="margin-bottom: 20px;">
                     <strong>Technologies used:</strong>
@@ -260,7 +242,7 @@
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/simony05/worldlybites', '_blank')"
+                  onclick="window.open('https://github.com/simony05/hackathon', '_blank')"
                 >
                   Github
                 </button>
@@ -325,7 +307,15 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a onclick="window.open('https://www.linkedin.com/in/simon-yan/', '_blank')">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+          />
+          <p><a onclick="window.open('https://github.com/simony05', '_blank')">Github</a></p>
         </div>
       </div>
     </section>

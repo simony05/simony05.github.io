@@ -6,9 +6,9 @@ function toggleMenu() {
 }
 
 const buttonValues = {
-  video1: '5BdGLMO1mQs?si=zcw5iwbM5oDumj4-&amp;start=158',
+  video1: 'Ya9FqpGUGQ0?si=fihCw89DTBi1b-5L',
   video2: 'H6BRfTwE9zc?si=GgK8jFPvEItorMdM',
-  video3: 'Value 3',
+  video3: '5BdGLMO1mQs?si=zcw5iwbM5oDumj4-&amp;start=158',
 };
 
 const modalBtns = document.querySelectorAll('.modal-btn');
