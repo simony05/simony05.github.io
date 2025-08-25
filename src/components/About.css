@@ -1,0 +1,249 @@
+#about {
+  position: relative;
+}
+
+.about-container {
+  display: flex;
+  gap: 4rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.carousel-outer-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.carousel-image-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+  left: 20px;
+}
+
+.carousel-button.next {
+  right: 20px;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1.5rem;
+  align-self: center;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Right side - About Text */
+.about-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 500px;
+  align-items: flex-start;
+}
+
+.about-text {
+  background: white;
+  padding: 2rem 2rem 0.5rem 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  margin-top: 0;
+}
+
+
+
+.about-text h3 {
+  color: #333;
+  margin-bottom: 0rem;
+  font-size: 1.5rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: rgb(85, 85, 85);
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/* Skills section below */
+.skills-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.skills-section h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  width: 3rem;
+  height: 3rem;
+  cursor: default;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .carousel-outer-container {
+    height: auto;
+  }
+  
+  .carousel {
+    height: 300px;
+  }
+  
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  .carousel-indicators {
+    margin-top: 1rem;
+  }
+  
+  .skills-container {
+    gap: 1.5rem;
+  }
+  
+  .skill-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel {
+    height: 250px;
+  }
+  
+  .carousel-button {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .skills-container {
+    gap: 1rem;
+  }
+}
+
+/* Ensure right text column is top-aligned on desktop, leaving space under it
+   when the left carousel includes dots below the image */
+@media screen and (min-width: 769px) {
+  .about-text-container {
+    align-self: flex-start;
+  }
+}
