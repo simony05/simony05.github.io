@@ -1,1 +1,263 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Simon Yan</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=SUSE:wght@300;400;500;600&display=swap" rel="stylesheet"><script defer="defer" src="/static/js/main.1c60f990.js"></script><link href="/static/css/main.e7592cb4.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simon Yan — Computer Science at UC Santa Barbara. Building backend systems, infrastructure, and applied AI.">
+  <meta name="theme-color" content="#e8edf2">
+  <title>Simon Yan</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233e3732'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' fill='%23f5ede4'%3ESY%3C/text%3E%3C/svg%3E">
+  <style>
+    /* Change these colors to personalize the entire page. */
+    :root {
+      --cream: #e8edf2;
+      --paper: #f7f9fb;
+      --ink: #3e3732;
+      --muted: #6c625b;
+      --line: #cdd6de;
+      --accent: #304a43;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Segoe UI", Arial, sans-serif; font-size: 1rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-underline-offset: .25em; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+    .skip-link { position: absolute; left: 1rem; top: -5rem; padding: .6rem 1rem; background: var(--paper); z-index: 2; }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(100% - 3rem, 850px); margin-inline: auto; }
+    .masthead { background: var(--cream); }
+    nav { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; padding: .75rem 1rem; }
+    nav a { padding: .55rem 1.3rem; text-decoration: none; font-size: .9375rem; font-weight: 600; border-bottom: 2px solid transparent; }
+    nav a:first-child { border-bottom-color: var(--ink); }
+    nav a:hover { border-bottom-color: var(--ink); }
+    .hero { width: min(100% - 4rem, 1120px); margin-inline: auto; display: grid; grid-template-columns: .9fr 1.25fr; align-items: center; gap: 5rem; padding: 4.75rem 0 5rem; }
+    .portrait { width: min(100%, 355px); aspect-ratio: 1; border-radius: 50%; background: var(--accent); display: grid; place-items: center; overflow: hidden; }
+    .portrait span { color: var(--cream); font-family: Georgia, "Times New Roman", serif; font-size: clamp(5rem, 11vw, 8.5rem); letter-spacing: -.065em; padding-right: .065em; font-weight: 400; }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+    h1 { margin: 0; font-size: clamp(3rem, 6.5vw, 5rem); line-height: 1.08; font-weight: 650; letter-spacing: -.055em; overflow-wrap: anywhere; }
+    .hero-note { color: var(--muted); margin: 1.25rem 0 0; font-size: 1.0625rem; }
+    .about { padding-block: 4rem; }
+    .about p { margin: 0 0 1.1rem; font-size: 1.0625rem; }
+    .about p:last-of-type { margin-bottom: 0; }
+    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .7rem 1.65rem; border: 1px solid var(--ink); border-radius: 5px; font-size: .875rem; text-decoration: none; background: transparent; transition: background .15s ease, color .15s ease; }
+    .button-primary { background: var(--ink); color: var(--paper); }
+    .button:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+    .section { padding-block: 3.5rem; }
+    .experience { background: var(--cream); }
+    h2 { margin: 0 0 2.2rem; font-size: 2rem; line-height: 1.2; letter-spacing: -.035em; font-weight: 600; }
+    .experience-row { display: grid; grid-template-columns: 1fr 1.55fr; gap: 2rem; padding: 1.75rem 0; border-bottom: 1px solid var(--line); }
+    .experience-row:first-of-type { padding-top: 0; }
+    .experience-row:last-child { padding-bottom: 0; border: 0; }
+    .date { margin: 0; color: var(--muted); font-size: .9375rem; }
+    h3 { margin: 0; font-size: 1.0625rem; font-weight: 600; line-height: 1.5; }
+    .company { margin: .25rem 0 .65rem; color: var(--muted); }
+    .description { margin: 0; }
+    ul.description { padding-left: 1.2rem; }
+    .description li + li { margin-top: .45rem; }
+    .project { padding: 1.7rem 0; border-bottom: 1px solid var(--line); }
+    .project:first-of-type { padding-top: 0; }
+    .project:last-child { padding-bottom: 0; border: 0; }
+    .project-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: .4rem 1.5rem; margin-bottom: .65rem; }
+    .project-heading h3 { font-size: 1.2rem; }
+    .tech { margin: 0; color: var(--muted); font-size: .875rem; }
+    .contact { background: var(--cream); }
+    .contact h2 { margin-bottom: .8rem; }
+    .contact p { margin: 0 0 1.25rem; }
+    .email { display: inline-block; font-size: clamp(1.25rem, 4vw, 1.8rem); letter-spacing: -.025em; overflow-wrap: anywhere; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: .8rem 1.8rem; margin-top: 1.5rem; }
+    footer { background: var(--cream); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-top: 1px solid var(--line); padding-block: 1.3rem; font-size: .875rem; color: var(--muted); }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; gap: 2.2rem; text-align: center; padding: 2.5rem 0 3.5rem; }
+      .portrait { width: min(65vw, 270px); margin-inline: auto; }
+      .portrait span { font-size: 6.5rem; }
+      .hero-note { max-width: 27rem; margin-inline: auto; }
+      .about { padding-block: 2.75rem; }
+      .section { padding-block: 2.75rem; }
+      .experience-row { grid-template-columns: 1fr; gap: .65rem; }
+      h2 { font-size: 1.75rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+  <header class="masthead">
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hero">
+      <div class="portrait"><img src="profile.png" alt="Simon Yan"></div>
+      <div>
+        <h1>Hi, I'm Simon</h1>
+        <p class="hero-note">Computer science at UC Santa Barbara.<br>Backend systems, infrastructure, and applied AI.</p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about container" id="about" aria-label="About Simon">
+      <p>I'm a senior studying computer science at UC Santa Barbara, graduating in March 2027. Most of my work is on the backend and infrastructure side, and lately a lot of it has involved machine learning.</p>
+      <p>Right now I'm interning at Shopify on the foundation model that forecasts merchant business. Before that I spent the summer at Amazon working on the catalog ML pipeline, and the summer before that at Censys building LLM tools for analyzing internet host data.</p>
+      <p>At school I lead company-sponsored projects through ACM Industry, including one with RTX on running an RF signal classifier on RISC-V, and run workshops on database design and applied AI. On the side I've been building Launchpad, a deployment runtime for AI coding agents.</p>
+      <div class="actions">
+        <a class="button button-primary" href="#experience">EXPLORE MY WORK</a>
+        <a class="button" href="#contact">GET IN TOUCH</a>
+      </div>
+    </section>
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title">Work Experience</h2>
+        <article class="experience-row">
+          <p class="date">Sep 2026 – Present</p>
+          <div>
+            <h3>Software Engineering Intern</h3>
+            <p class="company">Shopify · Bellevue, WA</p>
+            <ul class="description">
+              <li>Improving evaluation scores of Shopify's merchant business forecasting foundation model by 4.5% on downstream prediction tasks by compressing admin browsing activity into session-level summaries.</li>
+              <li>Designed BigQuery preprocessing that groups 578 admin page events into 18 categories, cutting the number of merchant histories that exceed the model's context limit by 99.98%.</li>
+              <li>Running experiments on dropping, downsampling, and aggregating high-frequency, low-signal events so rarer and more meaningful merchant activity doesn't get drowned out of the sequence.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-row">
+          <p class="date">Jun 2026 – Sep 2026</p>
+          <div>
+            <h3>Software Development Engineer Intern</h3>
+            <p class="company">Amazon · Seattle, WA</p>
+            <ul class="description">
+              <li>Built a centralized configuration store on DynamoDB and Lambda for Amazon's catalog ML enrichment pipeline, which generates missing product information across the catalog.</li>
+              <li>Replaced hard-coded routing across AWS Batch jobs, LLM configs, and other services. Before, a single change meant editing dozens of files across multiple packages and shipping a production deployment.</li>
+              <li>Added a management interface with two-person approvals, versioned snapshots, concurrency locking, audit trails, and instant rollback, bringing configuration updates from hours down to seconds.</li>
+              <li>Used version-based naming in S3 so jobs that run for hours or days keep a consistent configuration even if it changes mid-run.</li>
+              <li>Wrote the design doc weighing options and tradeoffs for each component, and worked through feedback in design reviews before implementation.</li>
+              <li>Cut end-to-end time for catalog backfill jobs by over 120x, from 2.6 days P90 to under 30 minutes per product.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-row">
+          <p class="date">Jun 2025 – Sep 2025</p>
+          <div>
+            <h3>AI/ML Software Engineering Intern</h3>
+            <p class="company">Censys · Ann Arbor, MI</p>
+            <ul class="description">
+              <li>Developed a multi-agent summarization service for large-scale internet host data. Instead of one agent with an overloaded prompt, 8 subagents each specialize in one area, such as software, threats, or fingerprints, and run in parallel.</li>
+              <li>Splitting the work costs more tokens but produced more consistent, higher-quality summaries than a single agent handed the full context.</li>
+              <li>Built an LLM-as-a-judge evaluation framework that scores summaries against the source data on factual consistency, coverage, relevance, and conciseness.</li>
+              <li>Designed a file directory interface that makes malicious files on a host easier to find, working with the design and product teams, and led user acceptance testing after the MVP to refine it based on feedback.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-row">
+          <p class="date">Sep 2025 – Present</p>
+          <div>
+            <h3>Project Lead and Officer</h3>
+            <p class="company">ACM Industry · Goleta, CA</p>
+            <ul class="description">
+              <li>Lead company-sponsored projects, from defining the scope of each project to guiding the student teams that build it.</li>
+              <li>Led a project with RTX on running an RF signal classifier efficiently on RISC-V. Wrote the requirements doc and an onboarding guide on the background material so the team could start on code from the first meeting.</li>
+              <li>Present interactive workshops on industry topics like database design and applied AI to more than 100 students.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-row">
+          <p class="date">Dec 2025 – Apr 2026</p>
+          <div>
+            <h3>Undergraduate Research Assistant</h3>
+            <p class="company">UCSB Computer Architecture Lab (ArchLab) · Goleta, CA</p>
+            <ul class="description">
+              <li>Designed and implemented a modular RISC-V processor core in PyRTL, building the pipeline stages, forwarding, and branch prediction.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="experience-row">
+          <p class="date">Dec 2021 – May 2022</p>
+          <div>
+            <h3>Machine Learning Research Intern</h3>
+            <p class="company">University of California, Santa Cruz · Santa Cruz, CA</p>
+            <ul class="description">
+              <li>Investigated electric load forecasting and quantified how integrating renewable energy affects power grid efficiency.</li>
+              <li>Reached 95% prediction accuracy by optimizing regression, neural network, and ARIMA models.</li>
+              <li>Delivered an analysis of model training and performance, with actionable insights for improving load forecasting.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Selected Projects</h2>
+        <article class="project">
+          <div class="project-heading">
+            <h3><a href="https://github.com/simony05/Launchpad" target="_blank" rel="noopener noreferrer">Launchpad</a></h3>
+            <p class="tech">Go · Docker · AWS · PostgreSQL · gRPC</p>
+          </div>
+          <ul class="description">
+            <li>A deployment runtime built for AI coding agents. An agent can package an application into a container and get back a standalone, shareable URL without any local setup.</li>
+            <li>A distributed orchestration layer handles resource scheduling, dynamic routing, failure recovery, scale-to-zero, and TTL-based cleanup across a multi-node worker cluster.</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-heading">
+            <h3>RTX RF Signal Classifier</h3>
+            <p class="tech">C++ · RISC-V · SIMD · BLAS · SLEEF</p>
+          </div>
+          <ul class="description">
+            <li>A C++ tensor framework for real-time RF signal classification on RISC-V, built with RTX. It runs a CNN that classifies signals from 128 raw I/Q samples on low-power hardware, where a full CPU or GPU isn't an option.</li>
+            <li>Tensor shapes are fixed at compile time and enforced with C++20 concepts, so sizes resolve through constexpr and mdspan accessors inline down to plain indexing. That lets the compiler unroll loops and vectorize matrix operations with the RISC-V Vector Extension.</li>
+            <li>An expression system defers evaluation until it sees the whole expression, fusing chains like relu(conv + bias) into one pass over the data instead of one pass per operation. This avoids intermediate tensors and cuts memory reads and writes.</li>
+            <li>A custom memory buffer reserves one contiguous block up front and serves allocations by advancing a pointer, which makes allocation cheaper and more predictable than a general-purpose allocator and keeps data cache-friendly.</li>
+            <li>General-purpose libraries like PyTorch carry runtime overhead to support every workload. Since our model and target hardware are known ahead of time, we moved as much work as possible to compile time and used BLAS and SLEEF for the core math.</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-heading">
+            <h3>Machine Learning Research Projects</h3>
+            <p class="tech">Python · PyTorch · Matplotlib · Hugging Face</p>
+          </div>
+          <ul class="description">
+            <li><strong>Object detection with YOLOv1:</strong> Increased mAP by 10%, stabilized training, and reduced training time by modifying the model architecture, including bounding boxes, hyperparameters, and a dynamic learning rate.</li>
+            <li><strong>Movie review sentiment analysis:</strong> Fine-tuned DistilBERT with head-only training and LoRA to compare the tradeoffs in training time, memory usage, and accuracy.</li>
+            <li><strong>DCGAN image generation:</strong> Improved image quality and training stability through data augmentation, hyperparameter tuning, and architectural changes that prevent mode collapse.</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="project-heading">
+            <h3>SOLPower</h3>
+            <p class="tech">Python · Flask · React · D3.js · XGBoost · Groq</p>
+          </div>
+          <ul class="description">
+            <li>An AI-powered web app for evaluating solar energy site suitability. Won first place at the 2025 UCSB Datathon.</li>
+            <li>Led full-stack development under tight hackathon deadlines, building an interactive map of the US with D3.js and a Groq-powered chat for extra insights.</li>
+            <li>Scoped the models to solar first and kept the code modular so it could be extended to the other renewable sources in the same dataset.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Let's get in touch</h2>
+        <p>Have a project in mind or want to connect? Send me a message.</p>
+        <a class="email" href="mailto:simonry30@gmail.com">simonry30@gmail.com</a>
+        <div class="contact-links">
+          <a href="https://github.com/simony05" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/simon-yan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+14089660369">408-966-0369</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <span>Simon Yan</span>
+      <a href="#about">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
